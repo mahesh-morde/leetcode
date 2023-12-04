@@ -5,6 +5,7 @@
 class Solution:
     def minTimeToVisitAllPoints(self, points: List[List[int]]) -> int:
         s=0
+        
         for i in range(len(points)-1):
             a=points[i]
             b=points[i+1]
