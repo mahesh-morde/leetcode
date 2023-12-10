@@ -36,3 +36,27 @@
 
 
 
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        nums = []
+
+        def dfs(node):
+            # each time you can visit an existing node
+            if node:
+                # recursevily visit it left
+                dfs(node.left)
+                # store value of a node
+                nums.append(node.val)
+                # and right child
+                dfs(node.right)
+        
+        # start dfs
+        dfs(root)
+
+        return nums
