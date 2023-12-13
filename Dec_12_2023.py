@@ -26,3 +26,13 @@
 
 # 2 <= nums.length <= 500
 # 1 <= nums[i] <= 10^3
+
+
+
+
+
+
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        nums.sort(reverse=True)
+        return abs(nums[0] - 1) * abs(nums[1] - 1)
