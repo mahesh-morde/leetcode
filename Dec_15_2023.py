@@ -40,3 +40,13 @@
 
 
 
+
+
+class Solution:
+    def destCity(self, paths: List[List[str]]) -> str:
+        start_cities, end_cities = map(set, zip(*paths))
+        #print(start_cities, end_cities)
+        destination = (end_cities - start_cities)
+        #print("sestination", destination)
+        a = destination.pop()
+        return a
